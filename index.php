@@ -2,9 +2,6 @@
 
 include 'shop.php';
 
-
-
-
 $product1 = new Product('Ciotola', 'Strumenti', 'argento', 14.99, 9, false,'Cane');
 $product2 = new Product('Bastoncini di Pesce', 'Cibo', '', 6.99, 4, true,'Gatto');
 $product3 = new Product('guinzaglio', 'Strumenti', 'blu', 20.00, 9, false,'Cane');
@@ -50,7 +47,7 @@ $list_product=[
                             <h5 class="card-title"><?php echo $product->getName()?></h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Prezzo:  <?php echo $product->getPrice()?>€</li>
+                            <li class="list-group-item <?php echo $product->getPriceRange()?> ">Prezzo:  <?php echo $product->getPrice()?>€</li>
                             <li class="list-group-item">Ecosostenibile:  <?php echo $product->getEcoFriendlyCheck()?> <p></p></li>
                             <li class="list-group-item">Votazione:  <?php echo $product->getVote()?> <p></p></li>
                             <li class="list-group-item">Colore:  <?php echo $product->getColor()?> <p></p></li>

@@ -115,5 +115,13 @@ class Product  {
             }
             
         }
+    public function getPriceRange(): string
+        {
+            if($this->price> 15){
+                return 'bg-danger';
+            }else{
+                return 'bg-success';
+            }
+        }
 
 }
